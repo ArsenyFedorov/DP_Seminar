@@ -16,7 +16,10 @@ else:
     count = 2
     while num + 1 > count:
         fib_list.append(fib_1)
-        fib_list.insert(0, -fib_1)
+        if count % 2 == 1:
+            fib_list.insert(0, fib_1)
+        else:
+            fib_list.insert(0, -fib_1)
         fib_2, fib_1 = fib_2 + fib_1, fib_2
         # Присваивание значений фибоначи
         count += 1
